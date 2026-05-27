@@ -15,37 +15,36 @@
         html{scroll-behavior:smooth}
         body{font-family:'Noto Sans KR',sans-serif;color:var(--fg);background:var(--bg);-webkit-font-smoothing:antialiased}
         a{color:inherit;text-decoration:none}
-        img,video{display:block;width:100%}
+        img,video{display:block}
 
         /* NAV */
-        .nav{position:fixed;top:0;left:0;right:0;z-index:999;display:flex;align-items:center;justify-content:space-between;padding:20px 40px;background:rgba(255,255,255,.95);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px)}
-        .nav img{height:32px}
+        .nav{position:fixed;top:0;left:0;right:0;z-index:999;display:flex;align-items:center;justify-content:space-between;padding:20px 40px;background:rgba(255,255,255,.95);backdrop-filter:blur(16px)}
+        .nav img{height:32px;width:auto}
         .nav-right{display:flex;gap:32px;align-items:center}
         .nav-right a{font-size:12px;font-weight:400;letter-spacing:1px;color:var(--mute);transition:color .2s}
         .nav-right a:hover{color:var(--fg)}
 
-        /* HERO — full bleed product */
-        .hero{position:relative;height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;background:var(--lav)}
-        .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;padding:8vh 20vw}
-        .hero-overlay{position:absolute;bottom:80px;left:50%;transform:translateX(-50%);text-align:center;z-index:2;width:90%;max-width:600px}
-        .hero-overlay h1{font-size:13px;font-weight:500;letter-spacing:3px;color:var(--purple);margin-bottom:16px;text-transform:uppercase}
-        .hero-overlay .hero-title{font-size:42px;font-weight:200;letter-spacing:-0.5px;color:var(--fg);margin-bottom:48px}
-        .hero-overlay .hero-title strong{font-weight:700;color:var(--purple)}
-        .hero-price{display:flex;justify-content:center;gap:60px;margin-bottom:32px}
-        .hero-price .hp{text-align:center}
-        .hero-price .hp .amt{font-size:56px;font-weight:900;color:var(--fg);line-height:1;margin-bottom:8px}
-        .hero-price .hp .amt small{font-size:28px;font-weight:300}
+        /* HERO */
+        .hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;background:var(--lav);padding:120px 80px 80px;gap:40px}
+        .hero-img-wrap img{width:100%;max-width:480px;height:auto;object-fit:contain;display:block;margin:0 auto}
+        .hero-text{padding-left:40px}
+        .hero-text .eyebrow{font-size:12px;font-weight:500;letter-spacing:3px;color:var(--purple);margin-bottom:20px;text-transform:uppercase}
+        .hero-text .hero-title{font-size:44px;font-weight:200;letter-spacing:-0.5px;color:var(--fg);margin-bottom:48px;line-height:1.3}
+        .hero-text .hero-title strong{font-weight:700;color:var(--purple)}
+        .hero-price{display:flex;gap:48px;margin-bottom:36px}
+        .hero-price .hp .amt{font-size:52px;font-weight:900;color:var(--fg);line-height:1;margin-bottom:8px}
+        .hero-price .hp .amt small{font-size:24px;font-weight:300}
         .hero-price .hp .desc{font-size:13px;color:var(--mute);font-weight:300}
-        .hero-cta{display:inline-block;padding:22px 80px;background:var(--purple);color:#fff;font-size:16px;font-weight:700;letter-spacing:1px;transition:all .3s;margin-top:8px}
+        .hero-cta{display:inline-block;padding:22px 64px;background:var(--purple);color:#fff;font-size:16px;font-weight:700;letter-spacing:1px;transition:all .3s}
         .hero-cta:hover{background:#3a2060;transform:translateY(-3px);box-shadow:0 12px 40px rgba(75,45,120,.25)}
 
-        /* SECTION — video */
+        /* VIDEO */
         .video-section{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden;background:#000}
-        .video-section video{width:100%;height:100%;object-fit:cover}
+        .video-section video{width:100%;height:100%;object-fit:cover;display:block}
         .video-caption{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);text-align:center;z-index:2}
         .video-caption p{font-size:13px;font-weight:300;color:rgba(255,255,255,.85);letter-spacing:2px}
 
-        /* TEXT BLOCK */
+        /* STORY */
         .text-block{padding:120px 40px;text-align:center;max-width:800px;margin:0 auto}
         .text-block .eyebrow{font-size:12px;font-weight:500;letter-spacing:4px;color:var(--purple);margin-bottom:32px}
         .text-block h2{font-size:32px;font-weight:200;line-height:1.7;margin-bottom:40px;letter-spacing:-0.3px}
@@ -53,17 +52,17 @@
         .text-block p{font-size:15px;font-weight:300;line-height:2.1;color:#555;margin-bottom:16px}
         .text-block .sig{margin-top:48px;font-size:13px;color:var(--mute)}
 
-        /* FULL IMAGE SPLIT */
+        /* SPLIT */
         .split{display:grid;grid-template-columns:1fr 1fr;min-height:70vh}
         .split-img{overflow:hidden}
-        .split-img img{width:100%;height:100%;object-fit:cover}
+        .split-img img{width:100%;height:100%;object-fit:cover;display:block}
         .split-text{display:flex;flex-direction:column;justify-content:center;padding:80px 64px;background:var(--light)}
         .split-text .eyebrow{font-size:11px;font-weight:500;letter-spacing:3px;color:var(--purple);margin-bottom:24px}
         .split-text h3{font-size:28px;font-weight:700;line-height:1.5;margin-bottom:20px}
         .split-text p{font-size:14px;font-weight:300;line-height:2;color:#555}
         .split-text .note{margin-top:16px;font-size:13px;color:var(--mute);line-height:1.8}
 
-        /* FEATURES — horizontal scroll style */
+        /* FEATURES */
         .feat-strip{padding:100px 40px;background:var(--bg)}
         .feat-strip .eyebrow{font-size:12px;font-weight:500;letter-spacing:4px;color:var(--purple);text-align:center;margin-bottom:64px}
         .feat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;max-width:1400px;margin:0 auto}
@@ -89,20 +88,7 @@
         .patent-banner{background:var(--purple);color:#fff;padding:36px 48px;border-radius:4px;text-align:center;font-size:15px;font-weight:300;line-height:1.9}
         .patent-banner strong{font-weight:600}
 
-        /* CTA */
-        .cta-section{padding:140px 40px;text-align:center;background:var(--lav)}
-        .cta-section h2{font-size:36px;font-weight:200;margin-bottom:64px;letter-spacing:-0.5px}
-        .cta-section h2 strong{font-weight:700;color:var(--purple)}
-        .price-row{display:flex;justify-content:center;gap:100px;margin-bottom:40px}
-        .price-box .amt{font-size:48px;font-weight:900;color:var(--fg);line-height:1}
-        .price-box .amt small{font-size:22px;font-weight:300}
-        .price-box .desc{font-size:13px;color:var(--mute);font-weight:300;margin-top:10px}
-        .cta-info{font-size:13px;color:var(--mute);font-weight:300;margin-bottom:6px}
-        .cta-sub{font-size:12px;color:var(--purple);font-weight:300;font-style:italic;margin-bottom:48px}
-        .btn{display:inline-block;padding:22px 80px;background:var(--purple);color:#fff;font-size:15px;font-weight:700;letter-spacing:1px;border-radius:0;transition:all .3s}
-        .btn:hover{background:#3a2060;transform:translateY(-2px);box-shadow:0 12px 40px rgba(75,45,120,.2)}
-
-        /* HEALTH INFO */
+        /* HEALTH */
         .health{padding:100px 40px}
         .health-inner{max-width:900px;margin:0 auto}
         .health .eyebrow{font-size:12px;font-weight:500;letter-spacing:4px;color:var(--purple);text-align:center;margin-bottom:8px}
@@ -126,49 +112,42 @@
         footer .cp{font-size:11px;color:#ccc;font-weight:300}
 
         /* RESPONSIVE */
-        @media(max-width:900px){
-            .hero img{padding:15vh 8vw}
-            .hero-overlay{bottom:60px;width:95%}
-            .hero-overlay .hero-title{font-size:30px;margin-bottom:36px}
-            .hero-price{gap:40px}
-            .hero-price .hp .amt{font-size:44px}
-            .hero-price .hp .amt small{font-size:22px}
+        @media(max-width:1024px){
+            .hero{grid-template-columns:1fr;padding:120px 40px 60px;gap:48px}
+            .hero-text{padding-left:0;text-align:center}
+            .hero-price{justify-content:center}
+            .hero-img-wrap img{max-width:360px}
+        }
+        @media(max-width:768px){
+            .nav{padding:16px 20px}
+            .nav img{height:26px}
+            .nav-right{gap:20px}
+            .nav-right a{font-size:11px}
+            .hero{padding:100px 24px 60px}
+            .hero-text .hero-title{font-size:32px;margin-bottom:36px}
+            .hero-price{gap:32px}
+            .hero-price .hp .amt{font-size:40px}
+            .hero-cta{padding:20px 48px;font-size:15px}
+            .text-block{padding:80px 24px}
+            .text-block h2{font-size:24px}
             .split{grid-template-columns:1fr}
             .split-text{padding:60px 32px}
             .feat-row{grid-template-columns:1fr 1fr;gap:2px}
-            .patent-row{grid-template-columns:1fr}
-            .price-row{gap:60px}
-        }
-        @media(max-width:600px){
-            .nav{padding:16px 20px}
-            .nav img{height:24px}
-            .nav-right{gap:20px}
-            .nav-right a{font-size:11px}
-            .hero img{padding:20vh 6vw}
-            .hero-overlay{bottom:40px;width:95%}
-            .hero-overlay h1{font-size:11px;letter-spacing:2px;margin-bottom:12px}
-            .hero-overlay .hero-title{font-size:24px;margin-bottom:28px}
-            .hero-price{flex-direction:column;gap:24px;margin-bottom:24px}
-            .hero-price .hp .amt{font-size:40px}
-            .hero-cta{width:100%;max-width:300px;padding:20px 40px;font-size:15px}
-            .text-block{padding:80px 24px}
-            .text-block h2{font-size:24px}
-            .feat-row{grid-template-columns:1fr}
             .feat-strip{padding:60px 20px}
             .patent-section{padding:60px 20px}
-            .cta-section{padding:80px 24px}
-            .cta-section h2{font-size:26px}
-            .price-row{flex-direction:column;gap:36px}
-            .price-box .amt{font-size:40px}
-            .btn{width:100%;max-width:340px;padding:20px 40px}
+            .patent-row{grid-template-columns:1fr}
             .health{padding:60px 20px}
             footer{padding:40px 20px}
+        }
+        @media(max-width:480px){
+            .hero-price{flex-direction:column;gap:20px;align-items:center}
+            .hero-cta{width:100%;max-width:300px;text-align:center;padding:20px 32px}
+            .feat-row{grid-template-columns:1fr}
         }
     </style>
 </head>
 <body>
 
-<!-- NAV -->
 <div class="nav">
     <img src="jelakelly-logo-en.png" alt="JELAKELLY">
     <div class="nav-right">
@@ -177,11 +156,12 @@
     </div>
 </div>
 
-<!-- HERO — full bleed product image -->
 <section class="hero">
-    <img src="product-box-stick.jpg" alt="젤라켈리 캘리포니아 글루콘산 마그네슘">
-    <div class="hero-overlay">
-        <h1>California Magnesium Gluconate</h1>
+    <div class="hero-img-wrap">
+        <img src="product-box-stick.jpg" alt="젤라켈리 캘리포니아 글루콘산 마그네슘">
+    </div>
+    <div class="hero-text">
+        <p class="eyebrow">California Magnesium Gluconate</p>
         <p class="hero-title">가장 깨끗한 기준의 <strong>마그네슘</strong></p>
         <div class="hero-price">
             <div class="hp">
@@ -197,7 +177,6 @@
     </div>
 </section>
 
-<!-- VIDEO SECTION -->
 <section class="video-section">
     <video autoplay muted loop playsinline>
         <source src="pour-video.mp4" type="video/mp4">
@@ -207,7 +186,6 @@
     </div>
 </section>
 
-<!-- BRAND STORY -->
 <section class="text-block">
     <p class="eyebrow">TWO SISTERS, ONE MISSION</p>
     <h2>실리콘밸리와 뉴욕을 거쳐 서울로.<br>임신 중 찾아온 <strong>깨끗한 제품에 대한 집착.</strong></h2>
@@ -217,7 +195,6 @@
     <p class="sig">— Jelakelly 안젤라 & 켈리 드림</p>
 </section>
 
-<!-- LIFESTYLE — full bleed -->
 <section class="split">
     <div class="split-img">
         <img src="lifestyle-hand.jpeg" alt="젤라켈리 라이프스타일">
@@ -230,7 +207,6 @@
     </div>
 </section>
 
-<!-- FEATURES -->
 <section class="feat-strip">
     <p class="eyebrow">WHY JELAKELLY</p>
     <div class="feat-row">
@@ -257,7 +233,6 @@
     </div>
 </section>
 
-<!-- PATENT -->
 <section class="patent-section">
     <div class="patent-inner">
         <p class="eyebrow">PATENTED PROBIOTICS</p>
@@ -281,8 +256,6 @@
     </div>
 </section>
 
-
-<!-- HEALTH INFO -->
 <section class="health">
     <div class="health-inner">
         <p class="eyebrow">건강정보</p>
@@ -308,7 +281,6 @@
     </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
     <div class="flinks">
         <a href="https://www.instagram.com/jelakelly">Instagram</a>
