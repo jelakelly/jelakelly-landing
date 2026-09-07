@@ -254,7 +254,8 @@ h2{font-family:var(--display); font-size:clamp(23px,3.4vw,34px); font-weight:700
 .ch a.go{font-size:14px; font-weight:700; border-bottom:1.5px solid var(--fg); align-self:flex-start; padding-bottom:2px}
 
 /* ─────────── 언론 ─────────── */
-.press{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
+.press{display:grid; grid-template-columns:1fr; gap:16px}
+.prnote{margin:12px 0 0; font-size:13.5px; color:var(--soft); line-height:1.7; max-width:52em}
 @media (max-width:820px){ .press{grid-template-columns:1fr} }
 .pr{border:1px solid var(--rule); border-radius:16px; padding:24px; background:var(--card)}
 .pr .src{font-family:var(--mono); font-size:11px; letter-spacing:.1em; color:var(--mut); text-transform:uppercase}
@@ -630,8 +631,11 @@ footer a:hover{text-decoration:underline}
       <h2>젤라켈리 소식</h2>
     </div>
     <div class="press">
-      <a class="pr" href="#"><div class="src">헬스경향</div><h3>젤라켈리 마그네슘 1,000박스, 우리아이들의료재단에 전달</h3></a>
-      <a class="pr" href="#"><div class="src">Press Release · 2026.09</div><h3>젤라켈리, 합성감미료 넣지 않은 액상 마그네슘으로 올리브영 온라인몰 입점</h3></a>
+      <a class="pr" href="https://www.k-health.com/news/articleView.html?idxno=93307" target="_blank" rel="noopener">
+        <div class="src">헬스경향 · 2026.06.24</div>
+        <h3>우리아이들의료재단, 지역사회 영양제 기부…건강 취약계층 지원</h3>
+        <p class="prnote">우리아이들병원과 성북우리아이들병원이 마그네슘 영양제 1,000개를 구로구·성북구 종합사회복지관 6곳에 전달했습니다. 이때 전달된 제품이 젤라켈리 마그네슘입니다.</p>
+      </a>
     </div>
   </div>
 </section>
@@ -667,10 +671,6 @@ footer a:hover{text-decoration:underline}
       <details>
         <summary>어떻게 보관해야 하나요?</summary>
         <div class="a">직사광선을 피해 서늘한 곳에 보관해 주세요.</div>
-      </details>
-      <details>
-        <summary>젤라켈리는 어디서 제조하나요?</summary>
-        <div class="a">제조원은 (주)건보이며, HACCP 인증 시설에서 생산합니다. 유통전문판매원은 (주)원백입니다.</div>
       </details>
     </div>
   </div>
@@ -741,7 +741,7 @@ footer a:hover{text-decoration:underline}
     <div class="biz">
       <details class="bizinfo">
         <summary>사업자 정보</summary>
-        <div class="bizbody">상호 (주)원백 · 유통전문판매원 (주)원백 · 제조원 (주)건보 · 소재지 경기도 안양시 · 식품유형 액상차(일반식품, 살균제품) · 225 g [15 g × 15포]</div>
+        <div class="bizbody">상호 (주)원백 · 유통전문판매원 (주)원백 · 소재지 경기도 안양시 · 식품유형 액상차(일반식품, 살균제품) · 225 g [15 g × 15포]</div>
       </details>
       <div class="disc">본 제품은 질병의 예방 및 치료를 위한 의약품이 아닙니다. © 2026 Jelakelly. All rights reserved.</div>
     </div>
