@@ -1,4 +1,67 @@
+# www.jelakelly.com
+
 User-agent: *
+Allow: /
+
+# ── 검색엔진 ──────────────────────────────
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Yeti
+Allow: /
+
+User-agent: Daumoa
+Allow: /
+
+# ── AI 답변엔진 (AEO) ─────────────────────
+# 아래 크롤러를 막으면 ChatGPT·Claude·Perplexity 답변에
+# 젤라켈리가 인용되지 않습니다. 의도적으로 허용합니다.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: CCBot
 Allow: /
 
 Sitemap: https://www.jelakelly.com/sitemap.xml
