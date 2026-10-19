@@ -44,6 +44,7 @@
 <link rel="preload" as="image" href="assets/hero-plane.jpg">
 <style>
 @font-face{font-family:'JK Sans';src:url(assets/fonts/pretendard-sub.woff2) format('woff2');font-weight:45 920;font-display:swap}
+@font-face{font-family:'JK Sans';src:url(assets/fonts/pretendard-add.woff2) format('woff2');font-weight:45 920;font-display:swap;unicode-range:U+AC70,U+AD00,U+B00C,U+B2E8,U+B354,U+B370,U+B3CC,U+B4EC,U+B809,U+BC88,U+BCF5,U+BD81,U+C0AD,U+C140,U+C158,U+C5ED,U+C7AC,U+C9F8,U+CDB0,U+CEE4,U+D15C,U+D2B9,U+D398,U+D5A5,U+D5EC}
 @font-face{font-family:'JK Serif';src:url(assets/fonts/instrument-serif.woff2) format('woff2');font-weight:400;font-display:swap}
 :root{--ink:#0E1446;--text:#1B1D2B;--muted:#6B6E80;--line:#E6E7EE;--ice:#F2F4F9;--lilac:#ECE7F5;--bg:#FFFFFF}
 *{box-sizing:border-box}
@@ -143,6 +144,13 @@ dl.facts dt{color:var(--muted)}dl.facts dd{margin:0;color:var(--ink)}
 .lbl{font-size:11px;letter-spacing:.14em;color:var(--muted)}
 .press h3{font-weight:500;font-size:17px;color:var(--ink);margin:10px 0 0;line-height:1.6}
 .press .note{font-size:12px;color:var(--muted);margin-top:14px}
+.press .arts{display:grid;gap:20px}
+.press .art summary{cursor:pointer;list-style:none;color:var(--ink)}
+.press .art summary::-webkit-details-marker{display:none}
+.press .art summary::after{content:" +"}
+.press .art[open] summary::after{content:" −"}
+.press .art p{font-size:14px;line-height:1.8;color:var(--ink);margin:14px 0 0}
+.press .art a{display:inline-block;margin-top:14px;color:var(--ink)}
 /* faq */
 .faq{max-width:860px;margin:56px auto 0;border-top:1px solid var(--line)}
 .faq details{border-bottom:1px solid var(--line)}
@@ -408,14 +416,6 @@ dl.facts dt{color:var(--muted)}dl.facts dd{margin:0;color:var(--ink)}
       "@type": "Answer",
       "text": "네이버 스마트스토어, 올리브영 온라인몰, 그리고 올리브영 베러 광화문점·강남점·코엑스점·스타필드 안성점에서 구매하실 수 있습니다."
      }
-    },
-    {
-     "@type": "Question",
-     "name": "어디에서 만드나요?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "HACCP 인증 시설을 갖춘 (주)건보에서 만듭니다. 유통전문판매원은 (주)원백입니다."
-     }
     }
    ]
   },
@@ -485,10 +485,10 @@ dl.facts dt{color:var(--muted)}dl.facts dd{margin:0;color:var(--ink)}
  <div class="rv"><p class="eyebrow">SHOP</p><p class="en">Effortless wellness.</p><h2>보름 분량과 한 달 분량,<br>두 가지로 준비했습니다</h2></div>
  <div class="grid3"><article class="card rv"><a href="https://smartstore.naver.com/jelakelly" target="_blank" rel="noopener"><div class="ph"><img src="assets/box-1.webp" alt="젤라켈리 1박스와 스틱" loading="lazy" decoding="async"></div></a>
 <div class="nm"><b>젤라켈리 1박스</b><span>15포 · 보름 분량</span></div><p class="ds">맛부터 확인해 보고 싶으실 때 알맞습니다.</p>
-<div class="price">17,900원</div><p class="nt">1포당 1,193원</p>
+<div class="price"><em>22%</em>17,900원<s>22,900원</s></div><p class="nt">&nbsp;</p>
 <a class="btn line" href="https://smartstore.naver.com/jelakelly" target="_blank" rel="noopener">구매하기</a></article><article class="card rv"><a href="https://smartstore.naver.com/jelakelly" target="_blank" rel="noopener"><div class="ph"><img src="assets/box-2.webp" alt="젤라켈리 박스와 스틱 세 개" loading="lazy" decoding="async"><span class="tag">추천</span></div></a>
 <div class="nm"><b>젤라켈리 2박스</b><span>30포 · 한 달 분량</span></div><p class="ds">하루 한 포씩 드시면 꼭 한 달입니다.</p>
-<div class="price"><em>26%</em>33,800원<s>45,800원</s></div><p class="nt">1포당 1,127원 · 무료배송</p>
+<div class="price"><em>26%</em>33,800원<s>45,800원</s></div><p class="nt">무료배송</p>
 <a class="btn line" href="https://smartstore.naver.com/jelakelly" target="_blank" rel="noopener">구매하기</a></article><article class="card rv"><a href="https://smartstore.naver.com/jelakelly" target="_blank" rel="noopener"><div class="ph"><img src="assets/box-sub.webp" alt="젤라켈리 박스 세 개와 스틱" loading="lazy" decoding="async"><span class="tag">정기</span></div></a>
 <div class="nm"><b>정기배송</b><span>매달 2박스 · 3개월</span></div><p class="ds">떨어질 때쯤 알아서 도착하고, 언제든 해지하실 수 있습니다.</p>
 <div class="price"><em>2회차부터</em>29,900원<s>33,800원</s></div><p class="nt">매달 2박스가 자동으로 도착합니다</p>
@@ -552,14 +552,18 @@ dl.facts dt{color:var(--muted)}dl.facts dd{margin:0;color:var(--ink)}
  <div class="rv"><p class="eyebrow">PRESS</p><h2>젤라켈리를 소개한 곳</h2></div>
  <div class="press">
   <div class="c rv" style="padding:0;border:0"><div class="v"><video controls playsinline preload="none" poster="assets/gosuda-1015-poster.jpg"><source src="assets/gosuda-1015.mp4" type="video/mp4"></video></div>
-   <p class="lbl" style="margin-top:18px">광고(PPL) · 2026.10.15 · CBS</p><h3>김현정의 고수다 — 준오헤어 강윤선 편</h3><p class="note">방송 중 젤라켈리가 소개된 장면을 편집한 영상이며, 유료 광고협찬(PPL)을 포함합니다. 본 제품은 건강기능식품이 아닌 일반식품입니다.</p></div>
-  <a class="c rv" href="https://www.esquirekorea.co.kr/article/1911096" target="_blank" rel="noopener"><div><p class="lbl">기사 · 2026.10 · 에스콰이어 코리아</p><h3>에스콰이어 코리아에 소개되었습니다</h3></div><span class="lbl" style="color:var(--ink)">기사 보기 →</span></a>
+   <p class="lbl" style="margin-top:18px">광고(PPL) · 2026.10.15 · CBS</p><h3>김현정의 고수다 — 준오헤어 강윤선 의장 편</h3><p class="note">방송 중 젤라켈리가 소개된 장면을 편집한 영상이며, 유료 광고협찬(PPL)을 포함합니다. 본 제품은 건강기능식품이 아닌 일반식품입니다.</p></div>
+  <div class="arts">
+   <div class="c rv"><div><p class="lbl">기사 · 2026.10.12 · 에스콰이어 코리아</p><h3>에스콰이어 코리아 10월 리커버리 특집,<br>NIGHT 셀렉션에 소개되었습니다</h3></div>
+    <details class="art"><summary class="lbl">기사 내용 보기</summary><p>하루의 리듬에 맞춰 고른 아이템 가운데 NIGHT 셀렉션의 세 번째로, 미국산 글루콘산 마그네슘에 나이아신과 비타민 B1·B6를 더한 청사과맛 액상 마그네슘으로 소개되었습니다.</p><p class="note">EDITOR 김민호 · PHOTOGRAPHER 정우영</p><a class="lbl" href="https://www.esquirekorea.co.kr/article/1911096" target="_blank" rel="noopener">에스콰이어 코리아 원문 보기 →</a></details></div>
+   <a class="c rv" href="https://www.k-health.com/news/articleView.html?idxno=93307" target="_blank" rel="noopener"><div><p class="lbl">기사 · 2026.06.24 · 헬스경향</p><h3>우리아이들의료재단, 젤라켈리 1,000개를<br>지역사회에 기부했습니다</h3><p class="note">구로구·성북구 종합사회복지관 6곳에 전달되었습니다.</p></div><span class="lbl" style="color:var(--ink)">기사 보기 →</span></a>
+  </div>
  </div>
 </div></section>
 
 <section class="pad" id="faq" style="padding-top:40px"><div class="wrap">
  <div class="center rv"><p class="eyebrow">FAQ</p><h2>자주 묻는 질문</h2></div>
- <div class="faq"><details><summary>젤라켈리는 어떤 제품인가요?</summary><p>스틱을 뜯어 그대로 드시는 청사과맛 액상 마그네슘 스틱입니다. 건강기능식품이 아닌 일반식품입니다.</p></details><details><summary>선물로 보낼 수 있나요?</summary><p>네이버 선물하기로 보내실 수 있습니다. 주소를 몰라도 연락처만 있으면 됩니다.</p></details><details><summary>누구에게 선물하면 좋은가요?</summary><p>부모님, 가장 아끼는 친구, 고마운 분께 건네기 좋습니다. 젤라켈리를 만든 두 자매도 부모님께 가장 먼저 드렸고, 가장 아끼는 친구에게도 건넸습니다.</p></details><details><summary>선물하기 좋은 가격대와 구성은 어떻게 되나요?</summary><p>1박스(15포) 17,900원, 2박스(30포) 33,800원입니다. 처음 건네실 때는 1박스, 한 달 분량을 챙겨 드리고 싶을 때는 2박스가 알맞습니다.</p></details><details><summary>1포에 마그네슘이 얼마나 들어 있나요?</summary><p>1포(15 g)에 마그네슘 100 mg이 들어 있습니다. 1일 영양성분 기준치(315 mg)의 32%입니다.</p></details><details><summary>글루콘산 마그네슘은 무엇인가요?</summary><p>마그네슘이 유기산인 글루콘산과 결합한 형태입니다. 젤라켈리는 미국산 글루콘산 마그네슘을 씁니다.</p></details><details><summary>어떤 원료가 들어가나요?</summary><p>미국산 글루콘산 마그네슘 100 mg, 독일산 비타민 B1·B6이 들어갑니다. 맛은 국산 사과농축액과 프랑스산 자일리톨로 냈습니다.</p></details><details><summary>어떻게 먹나요?</summary><p>스틱 윗부분을 뜯어 그대로 짜서 드시면 됩니다. 물 없이도 드실 수 있고, 물을 곁들이셔도 좋습니다. 하루 1포에서 3포까지 드실 수 있습니다.</p></details><details><summary>언제 먹는 것이 좋은가요?</summary><p>정해진 시간은 없습니다. 매일 같은 시간에 드시면 잊지 않고 이어 가기 좋습니다.</p></details><details><summary>한 박스에 몇 포가 들어 있나요?</summary><p>15포가 들어 있습니다. 총 내용량은 225 g(15 g × 15포)입니다.</p></details><details><summary>어디에서 살 수 있나요?</summary><p>네이버 스마트스토어, 올리브영 온라인몰, 그리고 올리브영 베러 광화문점·강남점·코엑스점·스타필드 안성점에서 구매하실 수 있습니다.</p></details><details><summary>어디에서 만드나요?</summary><p>HACCP 인증 시설을 갖춘 (주)건보에서 만듭니다. 유통전문판매원은 (주)원백입니다.</p></details></div>
+ <div class="faq"><details><summary>젤라켈리는 어떤 제품인가요?</summary><p>스틱을 뜯어 그대로 드시는 청사과맛 액상 마그네슘 스틱입니다. 건강기능식품이 아닌 일반식품입니다.</p></details><details><summary>선물로 보낼 수 있나요?</summary><p>네이버 선물하기로 보내실 수 있습니다. 주소를 몰라도 연락처만 있으면 됩니다.</p></details><details><summary>누구에게 선물하면 좋은가요?</summary><p>부모님, 가장 아끼는 친구, 고마운 분께 건네기 좋습니다. 젤라켈리를 만든 두 자매도 부모님께 가장 먼저 드렸고, 가장 아끼는 친구에게도 건넸습니다.</p></details><details><summary>선물하기 좋은 가격대와 구성은 어떻게 되나요?</summary><p>1박스(15포) 17,900원, 2박스(30포) 33,800원입니다. 처음 건네실 때는 1박스, 한 달 분량을 챙겨 드리고 싶을 때는 2박스가 알맞습니다.</p></details><details><summary>1포에 마그네슘이 얼마나 들어 있나요?</summary><p>1포(15 g)에 마그네슘 100 mg이 들어 있습니다. 1일 영양성분 기준치(315 mg)의 32%입니다.</p></details><details><summary>글루콘산 마그네슘은 무엇인가요?</summary><p>마그네슘이 유기산인 글루콘산과 결합한 형태입니다. 젤라켈리는 미국산 글루콘산 마그네슘을 씁니다.</p></details><details><summary>어떤 원료가 들어가나요?</summary><p>미국산 글루콘산 마그네슘 100 mg, 독일산 비타민 B1·B6이 들어갑니다. 맛은 국산 사과농축액과 프랑스산 자일리톨로 냈습니다.</p></details><details><summary>어떻게 먹나요?</summary><p>스틱 윗부분을 뜯어 그대로 짜서 드시면 됩니다. 물 없이도 드실 수 있고, 물을 곁들이셔도 좋습니다. 하루 1포에서 3포까지 드실 수 있습니다.</p></details><details><summary>언제 먹는 것이 좋은가요?</summary><p>정해진 시간은 없습니다. 매일 같은 시간에 드시면 잊지 않고 이어 가기 좋습니다.</p></details><details><summary>한 박스에 몇 포가 들어 있나요?</summary><p>15포가 들어 있습니다. 총 내용량은 225 g(15 g × 15포)입니다.</p></details><details><summary>어디에서 살 수 있나요?</summary><p>네이버 스마트스토어, 올리브영 온라인몰, 그리고 올리브영 베러 광화문점·강남점·코엑스점·스타필드 안성점에서 구매하실 수 있습니다.</p></details></div>
 </div></section>
 </main>
 
@@ -569,7 +573,7 @@ dl.facts dt{color:var(--muted)}dl.facts dd{margin:0;color:var(--ink)}
   <div><h4>Shop</h4><a href="https://smartstore.naver.com/jelakelly" target=_blank rel=noopener>네이버 스마트스토어</a><a href="https://oy.run/SNcvwkIn5wyJ7S" target=_blank rel=noopener>올리브영 온라인몰</a><a href="#where">올리브영 베러 매장</a></div>
   <div><h4>Contact</h4><a href="https://www.instagram.com/jelakelly/" target="_blank" rel="noopener">Instagram @jelakelly</a><a href="mailto:angela@jelakelly.com?subject=%5B%EC%A0%9C%ED%9C%B4%20%C2%B7%20%EC%9E%85%EC%A0%90%20%EB%AC%B8%EC%9D%98%5D%20%EC%A0%A4%EB%9D%BC%EC%BC%88%EB%A6%AC&amp;body=%EC%95%88%EB%85%95%ED%95%98%EC%84%B8%EC%9A%94%2C%20%EC%A0%A4%EB%9D%BC%EC%BC%88%EB%A6%AC%20%ED%8C%80%EA%BB%98%0A%0A%ED%9A%8C%EC%82%AC%EB%AA%85%20%3A%0A%EB%8B%B4%EB%8B%B9%EC%9E%90%EB%AA%85%20%C2%B7%20%EC%97%B0%EB%9D%BD%EC%B2%98%20%3A%0A%EB%AC%B8%EC%9D%98%20%EC%9C%A0%ED%98%95%20(%EC%9E%85%EC%A0%90%20%2F%20%EA%B3%B5%EB%8F%99%EA%B5%AC%EB%A7%A4%20%2F%20%EC%88%98%EC%B6%9C%20%2F%20%EA%B8%B0%ED%83%80)%20%3A%0A%EB%AC%B8%EC%9D%98%20%EB%82%B4%EC%9A%A9%20%3A%0A%0A%EA%B0%90%EC%82%AC%ED%95%A9%EB%8B%88%EB%8B%A4.">입점 · 제휴 문의</a></div>
  </div>
- <div class="legal">상호 (주)원백 · 제조원 (주)건보 · 유통전문판매원 (주)원백<br>본 제품은 건강기능식품이 아닌 일반식품입니다. 본 제품은 질병의 예방 및 치료를 위한 제품이 아닙니다. 이상사례가 있는 경우 섭취를 중지하고 전문가와 상담하시기 바랍니다.<br>© 2026 Jelakelly. All rights reserved.</div>
+ <div class="legal">본 제품은 건강기능식품이 아닌 일반식품입니다. 본 제품은 질병의 예방 및 치료를 위한 제품이 아닙니다. 이상사례가 있는 경우 섭취를 중지하고 전문가와 상담하시기 바랍니다.<br>© 2026 Jelakelly. All rights reserved.</div>
 </div></footer>
 <script>
 (function(){
