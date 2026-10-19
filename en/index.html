@@ -44,6 +44,7 @@
 <link rel="preload" as="image" href="../assets/hero-plane.jpg">
 <style>
 @font-face{font-family:'JK Sans';src:url(../assets/fonts/pretendard-sub.woff2) format('woff2');font-weight:45 920;font-display:swap}
+@font-face{font-family:'JK Sans';src:url(../assets/fonts/pretendard-add.woff2) format('woff2');font-weight:45 920;font-display:swap;unicode-range:U+AC70,U+AD00,U+B00C,U+B2E8,U+B354,U+B370,U+B3CC,U+B4EC,U+B809,U+BC88,U+BCF5,U+BD81,U+C0AD,U+C140,U+C158,U+C5ED,U+C7AC,U+C9F8,U+CDB0,U+CEE4,U+D15C,U+D2B9,U+D398,U+D5A5,U+D5EC}
 @font-face{font-family:'JK Serif';src:url(../assets/fonts/instrument-serif.woff2) format('woff2');font-weight:400;font-display:swap}
 :root{--ink:#0E1446;--text:#1B1D2B;--muted:#6B6E80;--line:#E6E7EE;--ice:#F2F4F9;--lilac:#ECE7F5;--bg:#FFFFFF}
 *{box-sizing:border-box}
@@ -143,6 +144,13 @@ dl.facts dt{color:var(--muted)}dl.facts dd{margin:0;color:var(--ink)}
 .lbl{font-size:11px;letter-spacing:.14em;color:var(--muted)}
 .press h3{font-weight:500;font-size:17px;color:var(--ink);margin:10px 0 0;line-height:1.6}
 .press .note{font-size:12px;color:var(--muted);margin-top:14px}
+.press .arts{display:grid;gap:20px}
+.press .art summary{cursor:pointer;list-style:none;color:var(--ink)}
+.press .art summary::-webkit-details-marker{display:none}
+.press .art summary::after{content:" +"}
+.press .art[open] summary::after{content:" −"}
+.press .art p{font-size:14px;line-height:1.8;color:var(--ink);margin:14px 0 0}
+.press .art a{display:inline-block;margin-top:14px;color:var(--ink)}
 /* faq */
 .faq{max-width:860px;margin:56px auto 0;border-top:1px solid var(--line)}
 .faq details{border-bottom:1px solid var(--line)}
@@ -408,14 +416,6 @@ dl.facts dt{color:var(--muted)}dl.facts dd{margin:0;color:var(--ink)}
       "@type": "Answer",
       "text": "Naver Smart Store, Olive Young Online, and Olive Young Better at Gwanghwamun, Gangnam, COEX and Starfield Anseong."
      }
-    },
-    {
-     "@type": "Question",
-     "name": "Where is it made?",
-     "acceptedAnswer": {
-      "@type": "Answer",
-      "text": "Manufactured by Geonbo Co., Ltd. in a HACCP-certified facility in Korea. Distributed by Wonbaek Co., Ltd."
-     }
     }
    ]
   },
@@ -491,10 +491,10 @@ dl.facts dt{color:var(--muted)}dl.facts dd{margin:0;color:var(--ink)}
  <div class="rv"><p class="eyebrow">SHOP</p><p class="en">Effortless wellness.</p><h2>Fifteen days or a month—<br>two ways to start.</h2></div>
  <div class="grid3"><article class="card rv"><a href="https://smartstore.naver.com/jelakelly" target="_blank" rel="noopener"><div class="ph"><img src="../assets/box-1.webp" alt="One box of Jelakelly with a stick" loading="lazy" decoding="async"></div></a>
 <div class="nm"><b>Jelakelly, 1 box</b><span>15 sticks · 15 days</span></div><p class="ds">Just right for a first taste.</p>
-<div class="price">KRW 17,900</div><p class="nt">KRW 1,193 per stick</p>
+<div class="price"><em>22%</em>KRW 17,900<s>KRW 22,900</s></div><p class="nt">&nbsp;</p>
 <a class="btn line" href="https://smartstore.naver.com/jelakelly" target="_blank" rel="noopener">Shop</a></article><article class="card rv"><a href="https://smartstore.naver.com/jelakelly" target="_blank" rel="noopener"><div class="ph"><img src="../assets/box-2.webp" alt="Jelakelly box with three sticks" loading="lazy" decoding="async"><span class="tag">OUR PICK</span></div></a>
 <div class="nm"><b>Jelakelly, 2 boxes</b><span>30 sticks · 1 month</span></div><p class="ds">One a day, exactly a month.</p>
-<div class="price"><em>26%</em>KRW 33,800<s>KRW 45,800</s></div><p class="nt">KRW 1,127 per stick · free shipping</p>
+<div class="price"><em>26%</em>KRW 33,800<s>KRW 45,800</s></div><p class="nt">Free shipping</p>
 <a class="btn line" href="https://smartstore.naver.com/jelakelly" target="_blank" rel="noopener">Shop</a></article><article class="card rv"><a href="https://smartstore.naver.com/jelakelly" target="_blank" rel="noopener"><div class="ph"><img src="../assets/box-sub.webp" alt="Three Jelakelly boxes with sticks" loading="lazy" decoding="async"><span class="tag">SUB</span></div></a>
 <div class="nm"><b>Subscription</b><span>2 boxes monthly · 3 months</span></div><p class="ds">Arrives right as you run low. Cancel anytime.</p>
 <div class="price"><em>From 2nd delivery</em>KRW 29,900<s>KRW 33,800</s></div><p class="nt">Two boxes arrive every month</p>
@@ -558,14 +558,18 @@ dl.facts dt{color:var(--muted)}dl.facts dd{margin:0;color:var(--ink)}
  <div class="rv"><p class="eyebrow">PRESS</p><h2>As seen in</h2></div>
  <div class="press">
   <div class="c rv" style="padding:0;border:0"><div class="v"><video controls playsinline preload="none" poster="../assets/gosuda-1015-poster.jpg"><source src="../assets/gosuda-1015.mp4" type="video/mp4"></video></div>
-   <p class="lbl" style="margin-top:18px">Paid placement (PPL) · 2026.10.15 · CBS</p><h3>Kim Hyun-jung’s Gosuda — with Kang Yoon-sun of Juno Hair</h3><p class="note">An edited clip of the scene featuring Jelakelly. Includes paid product placement. This product is a general food, not a health functional food.</p></div>
-  <a class="c rv" href="https://www.esquirekorea.co.kr/article/1911096" target="_blank" rel="noopener"><div><p class="lbl">Article · 2026.10 · Esquire Korea</p><h3>Featured in Esquire Korea</h3></div><span class="lbl" style="color:var(--ink)">Read →</span></a>
+   <p class="lbl" style="margin-top:18px">Paid placement (PPL) · 2026.10.15 · CBS</p><h3>Kim Hyun-jung’s Gosuda — with Juno Hair Chairwoman Kang Yoon-sun</h3><p class="note">An edited clip of the scene featuring Jelakelly. Includes paid product placement. This product is a general food, not a health functional food.</p></div>
+  <div class="arts">
+   <div class="c rv"><div><p class="lbl">Article · 2026.10.12 · Esquire Korea</p><h3>Featured in Esquire Korea’s October<br>recovery edit, in the NIGHT selection</h3></div>
+    <details class="art"><summary class="lbl">Read the feature here</summary><p>Among items picked to match the rhythm of a day, Jelakelly appears third in the NIGHT selection, described as a green-apple liquid magnesium made with US magnesium gluconate, niacin, and vitamins B1 and B6.</p><p class="note">EDITOR Kim Min-ho · PHOTOGRAPHER Jung Woo-young</p><a class="lbl" href="https://www.esquirekorea.co.kr/article/1911096" target="_blank" rel="noopener">Original article on Esquire Korea →</a></details></div>
+   <a class="c rv" href="https://www.k-health.com/news/articleView.html?idxno=93307" target="_blank" rel="noopener"><div><p class="lbl">Article · 2026.06.24 · Health Kyunghyang</p><h3>Urideul Medical Foundation donated<br>1,000 boxes of Jelakelly to local communities</h3><p class="note">Delivered to six community welfare centers in Guro-gu and Seongbuk-gu, Seoul.</p></div><span class="lbl" style="color:var(--ink)">Read →</span></a>
+  </div>
  </div>
 </div></section>
 
 <section class="pad" id="faq" style="padding-top:40px"><div class="wrap">
  <div class="center rv"><p class="eyebrow">FAQ</p><h2>Frequently asked</h2></div>
- <div class="faq"><details><summary>What is Jelakelly?</summary><p>A green apple liquid magnesium stick. Tear the top and take it straight from the stick. It is a general food, not a health functional food.</p></details><details><summary>Can I send it as a gift?</summary><p>Yes, through Naver Gift. A phone number is all you need — no shipping address.</p></details><details><summary>Who is it a good gift for?</summary><p>Parents, your closest friend, or anyone you are grateful to. The two sisters behind Jelakelly gave it to their parents first, then to their closest friends.</p></details><details><summary>What does a gift cost?</summary><p>One box (15 sticks) is KRW 17,900 and two boxes (30 sticks) are KRW 33,800.</p></details><details><summary>How much magnesium is in one stick?</summary><p>100 mg of magnesium per 15 g stick—32% of the Korean daily reference value (315 mg).</p></details><details><summary>What is magnesium gluconate?</summary><p>Magnesium bound to gluconic acid, an organic acid. Jelakelly uses magnesium gluconate from the U.S.</p></details><details><summary>What is in it?</summary><p>100 mg of magnesium gluconate from the U.S. and vitamins B1 and B6 from Germany, flavored with Korean apple concentrate and French xylitol.</p></details><details><summary>How do I take it?</summary><p>Tear the top and squeeze it straight into your mouth. No water needed, though a sip afterward is fine. One to three sticks a day.</p></details><details><summary>When should I take it?</summary><p>There is no fixed time. Taking it at the same time each day makes it easier to keep going.</p></details><details><summary>How many sticks are in a box?</summary><p>15 sticks, 225 g in total (15 g × 15 sticks).</p></details><details><summary>Where can I buy it?</summary><p>Naver Smart Store, Olive Young Online, and Olive Young Better at Gwanghwamun, Gangnam, COEX and Starfield Anseong.</p></details><details><summary>Where is it made?</summary><p>Manufactured by Geonbo Co., Ltd. in a HACCP-certified facility in Korea. Distributed by Wonbaek Co., Ltd.</p></details></div>
+ <div class="faq"><details><summary>What is Jelakelly?</summary><p>A green apple liquid magnesium stick. Tear the top and take it straight from the stick. It is a general food, not a health functional food.</p></details><details><summary>Can I send it as a gift?</summary><p>Yes, through Naver Gift. A phone number is all you need — no shipping address.</p></details><details><summary>Who is it a good gift for?</summary><p>Parents, your closest friend, or anyone you are grateful to. The two sisters behind Jelakelly gave it to their parents first, then to their closest friends.</p></details><details><summary>What does a gift cost?</summary><p>One box (15 sticks) is KRW 17,900 and two boxes (30 sticks) are KRW 33,800.</p></details><details><summary>How much magnesium is in one stick?</summary><p>100 mg of magnesium per 15 g stick—32% of the Korean daily reference value (315 mg).</p></details><details><summary>What is magnesium gluconate?</summary><p>Magnesium bound to gluconic acid, an organic acid. Jelakelly uses magnesium gluconate from the U.S.</p></details><details><summary>What is in it?</summary><p>100 mg of magnesium gluconate from the U.S. and vitamins B1 and B6 from Germany, flavored with Korean apple concentrate and French xylitol.</p></details><details><summary>How do I take it?</summary><p>Tear the top and squeeze it straight into your mouth. No water needed, though a sip afterward is fine. One to three sticks a day.</p></details><details><summary>When should I take it?</summary><p>There is no fixed time. Taking it at the same time each day makes it easier to keep going.</p></details><details><summary>How many sticks are in a box?</summary><p>15 sticks, 225 g in total (15 g × 15 sticks).</p></details><details><summary>Where can I buy it?</summary><p>Naver Smart Store, Olive Young Online, and Olive Young Better at Gwanghwamun, Gangnam, COEX and Starfield Anseong.</p></details></div>
 </div></section>
 </main>
 
@@ -575,7 +579,7 @@ dl.facts dt{color:var(--muted)}dl.facts dd{margin:0;color:var(--ink)}
   <div><h4>Shop</h4><a href="https://smartstore.naver.com/jelakelly" target=_blank rel=noopener>Naver Smart Store</a><a href="https://oy.run/SNcvwkIn5wyJ7S" target=_blank rel=noopener>Olive Young Online</a><a href="#where">Olive Young Better stores</a></div>
   <div><h4>Contact</h4><a href="https://www.instagram.com/jelakelly/" target="_blank" rel="noopener">Instagram @jelakelly</a><a href="mailto:angela@jelakelly.com?subject=Partnership%20inquiry%20%E2%80%94%20Jelakelly&amp;body=Hello%20Jelakelly%20team%2C%0A%0ACompany%20%3A%0AContact%20name%20%C2%B7%20phone%20%3A%0AType%20of%20inquiry%20(retail%20%2F%20group%20buy%20%2F%20export%20%2F%20other)%20%3A%0ADetails%20%3A%0A%0AThank%20you.">Partnerships</a></div>
  </div>
- <div class="legal">Wonbaek Co., Ltd. · Manufacturer: Geonbo Co., Ltd. · Distributor: Wonbaek Co., Ltd.<br>This product is a general food, not a health functional food. It is not intended to prevent or treat any disease. If you experience any adverse reaction, stop use and consult a professional.<br>© 2026 Jelakelly. All rights reserved.</div>
+ <div class="legal">This product is a general food, not a health functional food. It is not intended to prevent or treat any disease. If you experience any adverse reaction, stop use and consult a professional.<br>© 2026 Jelakelly. All rights reserved.</div>
 </div></footer>
 <script>
 (function(){
