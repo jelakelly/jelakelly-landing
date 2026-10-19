@@ -1,0 +1,34 @@
+{
+  "redirects": [
+    {
+      "source": "/product.html",
+      "destination": "/#shop",
+      "permanent": true
+    },
+    {
+      "source": "/gift.html",
+      "destination": "/#gift",
+      "permanent": true
+    },
+    {
+      "source": "/where-to-buy.html",
+      "destination": "/#where",
+      "permanent": true
+    },
+    {
+      "source": "/brand.html",
+      "destination": "/#brand",
+      "permanent": true
+    },
+    {
+      "source": "/news.html",
+      "destination": "/#press",
+      "permanent": true
+    },
+    {
+      "source": "/faq.html",
+      "destination": "/#faq",
+      "permanent": true
+    }
+  ]
+}
