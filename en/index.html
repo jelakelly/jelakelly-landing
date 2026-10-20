@@ -44,7 +44,7 @@
 <link rel="preload" as="image" href="../assets/hero-plane.jpg">
 <style>
 @font-face{font-family:'JK Sans';src:url(../assets/fonts/pretendard-sub.woff2) format('woff2');font-weight:45 920;font-display:swap}
-@font-face{font-family:'JK Sans';src:url(../assets/fonts/pretendard-add.woff2) format('woff2');font-weight:45 920;font-display:swap;unicode-range:U+AC70,U+AD00,U+B00C,U+B2E8,U+B354,U+B370,U+B3CC,U+B4EC,U+B809,U+BC88,U+BCF5,U+BD81,U+C0AD,U+C140,U+C158,U+C5ED,U+C7AC,U+C9F8,U+CDB0,U+CEE4,U+D15C,U+D2B9,U+D398,U+D5A5,U+D5EC}
+@font-face{font-family:'JK Sans';src:url(../assets/fonts/pretendard-add.woff2) format('woff2');font-weight:45 920;font-display:swap;unicode-range:U+AC70,U+ACF5,U+AD00,U+B00C,U+B108,U+B2E8,U+B354,U+B370,U+B3CC,U+B4EC,U+B809,U+BC88,U+BCF5,U+BD81,U+BE5B,U+C0AD,U+C140,U+C158,U+C5ED,U+C6B8,U+C7AC,U+C9F8,U+CDB0,U+CEE4,U+D15C,U+D1A4,U+D2B9,U+D30C,U+D398,U+D5A5,U+D5EC}
 @font-face{font-family:'JK Serif';src:url(../assets/fonts/instrument-serif.woff2) format('woff2');font-weight:400;font-display:swap}
 :root{--ink:#0E1446;--text:#1B1D2B;--muted:#6B6E80;--line:#E6E7EE;--ice:#F2F4F9;--lilac:#ECE7F5;--bg:#FFFFFF}
 *{box-sizing:border-box}
@@ -145,6 +145,8 @@ dl.facts dt{color:var(--muted)}dl.facts dd{margin:0;color:var(--ink)}
 .press h3{font-weight:500;font-size:17px;color:var(--ink);margin:10px 0 0;line-height:1.6}
 .press .note{font-size:12px;color:var(--muted);margin-top:14px}
 .press .arts{display:grid;gap:20px}
+.press .mh{justify-content:flex-start}
+.press .mh img{width:calc(100% + 64px);max-width:none;margin:-32px -32px 0;aspect-ratio:4/3;object-fit:cover}
 .press .art summary{cursor:pointer;list-style:none;color:var(--ink)}
 .press .art summary::-webkit-details-marker{display:none}
 .press .art summary::after{content:" +"}
@@ -513,7 +515,7 @@ dl.facts dt{color:var(--muted)}dl.facts dd{margin:0;color:var(--ink)}
  </div>
 </section>
 
-<section class="band" aria-hidden="false"><video class="" data-auto autoplay muted loop playsinline preload="metadata" poster="../assets/fit-hands.jpg" aria-label="For the ones who care⁠—"><source src="../assets/fit-hands.mp4" type="video/mp4"></video></section>
+<section class="band" aria-hidden="false"><video class="" data-auto autoplay muted playsinline preload="metadata" poster="../assets/fit-hands.jpg" aria-label="For the ones who care⁠—"><source src="../assets/fit-hands.mp4" type="video/mp4"></video></section>
 <section class="pad" id="fit"><div class="wrap fit">
  <div class="rv"><p class="eyebrow">FOR YOU</p><p class="en">For the ones who care⁠—</p><h2>For those who look after themselves—<br>and the people beside them.</h2></div>
  <ol class="rv"><li><span>01</span>You keep at least one daily routine.</li><li><span>02</span>You believe what tastes good is what lasts as a habit.</li><li><span>03</span>You want a gift that won’t overlap with the rest.</li></ol>
@@ -562,7 +564,7 @@ dl.facts dt{color:var(--muted)}dl.facts dd{margin:0;color:var(--ink)}
   <div class="arts">
    <div class="c rv"><div><p class="lbl">Article · 2026.10.12 · Esquire Korea</p><h3>Featured in Esquire Korea’s October<br>recovery edit, in the NIGHT selection</h3></div>
     <details class="art"><summary class="lbl">Read the feature here</summary><p>Among items picked to match the rhythm of a day, Jelakelly appears third in the NIGHT selection, described as a green-apple liquid magnesium made with US magnesium gluconate, niacin, and vitamins B1 and B6.</p><p class="note">EDITOR Kim Min-ho · PHOTOGRAPHER Jung Woo-young</p><a class="lbl" href="https://www.esquirekorea.co.kr/article/1911096" target="_blank" rel="noopener">Original article on Esquire Korea →</a></details></div>
-   <a class="c rv" href="https://www.k-health.com/news/articleView.html?idxno=93307" target="_blank" rel="noopener"><div><p class="lbl">Article · 2026.06.24 · Health Kyunghyang</p><h3>Urideul Medical Foundation donated<br>1,000 boxes of Jelakelly to local communities</h3><p class="note">Delivered to six community welfare centers in Guro-gu and Seongbuk-gu, Seoul.</p></div><span class="lbl" style="color:var(--ink)">Read →</span></a>
+   <div class="c rv mh"><img src="../assets/half-marathon.webp" alt="Jelakelly sticks held up at the 3rd Hangang Seoul Half Marathon" loading="lazy" decoding="async"><div><p class="lbl">On site · 2026.08.30 · Yeouido Hangang Park</p><h3>The 3rd Hangang Seoul Half Marathon—<br>proud to run as a partner</h3><p class="note">At the start line, right beside the runners.</p></div></div>
   </div>
  </div>
 </div></section>
