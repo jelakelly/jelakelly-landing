@@ -44,7 +44,7 @@
 <link rel="preload" as="image" href="assets/hero-plane.jpg">
 <style>
 @font-face{font-family:'JK Sans';src:url(assets/fonts/pretendard-sub.woff2) format('woff2');font-weight:45 920;font-display:swap}
-@font-face{font-family:'JK Sans';src:url(assets/fonts/pretendard-add.woff2) format('woff2');font-weight:45 920;font-display:swap;unicode-range:U+AC70,U+AD00,U+B00C,U+B2E8,U+B354,U+B370,U+B3CC,U+B4EC,U+B809,U+BC88,U+BCF5,U+BD81,U+C0AD,U+C140,U+C158,U+C5ED,U+C7AC,U+C9F8,U+CDB0,U+CEE4,U+D15C,U+D2B9,U+D398,U+D5A5,U+D5EC}
+@font-face{font-family:'JK Sans';src:url(assets/fonts/pretendard-add.woff2) format('woff2');font-weight:45 920;font-display:swap;unicode-range:U+AC70,U+ACF5,U+AD00,U+B00C,U+B108,U+B2E8,U+B354,U+B370,U+B3CC,U+B4EC,U+B809,U+BC88,U+BCF5,U+BD81,U+BE5B,U+C0AD,U+C140,U+C158,U+C5ED,U+C6B8,U+C7AC,U+C9F8,U+CDB0,U+CEE4,U+D15C,U+D1A4,U+D2B9,U+D30C,U+D398,U+D5A5,U+D5EC}
 @font-face{font-family:'JK Serif';src:url(assets/fonts/instrument-serif.woff2) format('woff2');font-weight:400;font-display:swap}
 :root{--ink:#0E1446;--text:#1B1D2B;--muted:#6B6E80;--line:#E6E7EE;--ice:#F2F4F9;--lilac:#ECE7F5;--bg:#FFFFFF}
 *{box-sizing:border-box}
@@ -145,6 +145,8 @@ dl.facts dt{color:var(--muted)}dl.facts dd{margin:0;color:var(--ink)}
 .press h3{font-weight:500;font-size:17px;color:var(--ink);margin:10px 0 0;line-height:1.6}
 .press .note{font-size:12px;color:var(--muted);margin-top:14px}
 .press .arts{display:grid;gap:20px}
+.press .mh{justify-content:flex-start}
+.press .mh img{width:calc(100% + 64px);max-width:none;margin:-32px -32px 0;aspect-ratio:4/3;object-fit:cover}
 .press .art summary{cursor:pointer;list-style:none;color:var(--ink)}
 .press .art summary::-webkit-details-marker{display:none}
 .press .art summary::after{content:" +"}
@@ -507,7 +509,7 @@ dl.facts dt{color:var(--muted)}dl.facts dd{margin:0;color:var(--ink)}
  </div>
 </section>
 
-<section class="band" aria-hidden="false"><video class="" data-auto autoplay muted loop playsinline preload="metadata" poster="assets/fit-hands.jpg" aria-label="For the ones who care⁠—"><source src="assets/fit-hands.mp4" type="video/mp4"></video></section>
+<section class="band" aria-hidden="false"><video class="" data-auto autoplay muted playsinline preload="metadata" poster="assets/fit-hands.jpg" aria-label="For the ones who care⁠—"><source src="assets/fit-hands.mp4" type="video/mp4"></video></section>
 <section class="pad" id="fit"><div class="wrap fit">
  <div class="rv"><p class="eyebrow">FOR YOU</p><p class="en">For the ones who care⁠—</p><h2>나를 챙기면서<br>곁의 사람도 챙기는 분께</h2></div>
  <ol class="rv"><li><span>01</span>매일 지키는 루틴이 하나쯤 있는 분</li><li><span>02</span>맛있어야 오래 이어 갈 수 있다고 믿는 분</li><li><span>03</span>선물이 다른 것과 겹치지 않았으면 하는 분</li></ol>
@@ -556,7 +558,7 @@ dl.facts dt{color:var(--muted)}dl.facts dd{margin:0;color:var(--ink)}
   <div class="arts">
    <div class="c rv"><div><p class="lbl">기사 · 2026.10.12 · 에스콰이어 코리아</p><h3>에스콰이어 코리아 10월 리커버리 특집,<br>NIGHT 셀렉션에 소개되었습니다</h3></div>
     <details class="art"><summary class="lbl">기사 내용 보기</summary><p>하루의 리듬에 맞춰 고른 아이템 가운데 NIGHT 셀렉션의 세 번째로, 미국산 글루콘산 마그네슘에 나이아신과 비타민 B1·B6를 더한 청사과맛 액상 마그네슘으로 소개되었습니다.</p><p class="note">EDITOR 김민호 · PHOTOGRAPHER 정우영</p><a class="lbl" href="https://www.esquirekorea.co.kr/article/1911096" target="_blank" rel="noopener">에스콰이어 코리아 원문 보기 →</a></details></div>
-   <a class="c rv" href="https://www.k-health.com/news/articleView.html?idxno=93307" target="_blank" rel="noopener"><div><p class="lbl">기사 · 2026.06.24 · 헬스경향</p><h3>우리아이들의료재단, 젤라켈리 1,000개를<br>지역사회에 기부했습니다</h3><p class="note">구로구·성북구 종합사회복지관 6곳에 전달되었습니다.</p></div><span class="lbl" style="color:var(--ink)">기사 보기 →</span></a>
+   <div class="c rv mh"><img src="assets/half-marathon.webp" alt="제3회 한강 서울 하프 마라톤 현장에서 든 젤라켈리 스틱" loading="lazy" decoding="async"><div><p class="lbl">현장 · 2026.08.30 · 여의도 한강공원</p><h3>제3회 한강 서울 하프 마라톤,<br>대회 파트너로 함께했습니다</h3><p class="note">물빛광장의 출발선, 러너들 곁에 젤라켈리가 있었습니다.</p></div></div>
   </div>
  </div>
 </div></section>
